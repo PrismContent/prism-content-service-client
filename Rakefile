@@ -15,6 +15,7 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "prism-content-service-client"
+  gem.version = File.read('VERSION').chomp
   gem.homepage = "http://github.com/arvanasse/prism-content-service-client"
   gem.license = "MIT"
   gem.summary = %Q{An ActiveRecord-like interface for reading the ContentService API.}
