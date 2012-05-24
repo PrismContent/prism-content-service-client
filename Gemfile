@@ -4,7 +4,7 @@ source "http://rubygems.org"
 #   gem "activesupport", ">= 2.3.5"
 
 gem 'typhoeus', '~>0.3.3'
-gem 'activesupport', '2.3.14'
+gem 'activesupport', '>2.3.5'
 gem 'json', '~>1.6.6'
 
 # Add dependencies to develop your gem here.
