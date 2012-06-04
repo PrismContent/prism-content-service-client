@@ -21,6 +21,7 @@ module ContentService
     end
 
     def initialize(event_attr)
+      puts "Initializing with #{event_attr.inspect}"
       event_attr ||= {}
       event_attr = HashWithIndifferentAccess.new(event_attr)
 
