@@ -21,15 +21,13 @@ module ContentService
     end
 
     def initialize(event_attr)
-      puts "Initializing with #{event_attr.inspect}"
+      if defined?(Rails)
+        Rails.logger.debug "Initializing event with #{event_attr.inspect}"
+      end
       event_attr ||= {}
       event_attr = HashWithIndifferentAccess.new(event_attr)
 
-      begin
-        event_attr.merge!(:starting_at => Time.parse(event_attr[:starting_at])) if event_attr[:starting_at].is_a?(String) && !event_attr[:starting_at].blank?
-      rescue e
-        puts "Could not convert #{event_attr[:starting_at]} to time."
-      end
+      event_attr.merge!(:starting_at => Time.parse(event_attr[:starting_at])) if event_attr[:starting_at].is_a?(String) && !event_attr[:starting_at].blank?
 
       self.attributes = event_attr.slice *@@attributes
     end
