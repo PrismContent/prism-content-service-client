@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "prism-content-service-client"
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Andy Vanasse"]
-  s.date = "2012-05-24"
+  s.date = "2012-06-04"
   s.description = "An ActiveRecord-like interface for reading the ContentService API."
   s.email = "andyvanasse@gmail.com"
   s.extra_rdoc_files = [

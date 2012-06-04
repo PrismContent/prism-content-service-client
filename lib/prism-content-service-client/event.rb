@@ -21,9 +21,6 @@ module ContentService
     end
 
     def initialize(event_attr)
-      if defined?(Rails)
-        Rails.logger.debug "Initializing event with #{event_attr.inspect}"
-      end
       event_attr ||= {}
       event_attr = HashWithIndifferentAccess.new(event_attr)
 
