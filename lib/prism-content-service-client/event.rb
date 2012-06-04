@@ -24,7 +24,11 @@ module ContentService
       event_attr ||= {}
       event_attr = HashWithIndifferentAccess.new(event_attr)
 
-      event_attr.merge!(:starting_at => Time.parse(event_attr[:starting_at])) if event_attr[:starting_at].is_a?(String)
+      begin
+        event_attr.merge!(:starting_at => Time.parse(event_attr[:starting_at])) if event_attr[:starting_at].is_a?(String) && !event_attr[:starting_at].blank?
+      rescue e
+        puts "Could not convert #{event_attr[:starting_at]} to time."
+      end
 
       self.attributes = event_attr.slice *@@attributes
     end
