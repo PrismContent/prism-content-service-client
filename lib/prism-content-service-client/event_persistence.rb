@@ -43,7 +43,7 @@ module ContentService
         end
 
         def events_from(response)
-          JSON.parse(response.body)['events'].map(&:values).flatten.map{|attr| ContentService::Event.new(attr) }
+          JSON.parse(response.body)['events'].map{|attr| ContentService::Event.new(attr) }
         end
 
         def error_from(response)
