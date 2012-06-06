@@ -12,7 +12,7 @@ module ContentService
       end
 
       def enqueue(request)
-        ResidentialService::Config.hydra.queue(request)
+        ContentService::Config.hydra.queue(request)
       end
 
       private
@@ -27,11 +27,11 @@ module ContentService
         end
 
         def dated_collection_url(account_id, specific_date)
-          "http://#{ResidentialService::Config.host}/v1/accounts/#{account_id}/active_content/events?start_date=#{specific_date.strftime('%Y-%m-%d')}"
+          "http://#{ContentService::Config.host}/v1/accounts/#{account_id}/active_content/events?start_date=#{specific_date.strftime('%Y-%m-%d')}"
         end
 
         def collection_url(account_id)
-          "http://#{ResidentialService::Config.host}/v1/accounts/#{account_id}/active_content/events"
+          "http://#{ContentService::Config.host}/v1/accounts/#{account_id}/active_content/events"
         end
 
         def return_collection(response)

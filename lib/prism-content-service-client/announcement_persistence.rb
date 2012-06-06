@@ -9,12 +9,12 @@ module ContentService
       end
 
       def enqueue(request)
-        ResidentialService::Config.hydra.queue(request)
+        ContentService::Config.hydra.queue(request)
       end
 
       private
         def collection_url(account_id)
-          "http://#{ResidentialService::Config.host}/v1/accounts/#{account_id}/active_content/announcements"
+          "http://#{ContentService::Config.host}/v1/accounts/#{account_id}/active_content/announcements"
         end
 
         def return_collection(response)
