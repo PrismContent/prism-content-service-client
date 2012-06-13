@@ -2,7 +2,7 @@ module ContentService
   class Birthday
     require File.expand_path(File.dirname(__FILE__), 'birthday_persistence')
 
-    include Prism::Serialisers::JSON
+    include Prism::Serializers::JSON
 
     @@attributes = [:name, :id, :month, :year, :day]
 

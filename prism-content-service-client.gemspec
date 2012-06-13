@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "prism-content-service-client"
-  s.version = "0.0.8"
+  s.version = "0.0.9"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Andy Vanasse"]
@@ -29,8 +29,12 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "lib/prism-content-service-client.rb",
+    "lib/prism-content-service-client/anniversary.rb",
+    "lib/prism-content-service-client/anniversary_persistence.rb",
     "lib/prism-content-service-client/announcement.rb",
     "lib/prism-content-service-client/announcement_persistence.rb",
+    "lib/prism-content-service-client/birthday.rb",
+    "lib/prism-content-service-client/birthday_persistence.rb",
     "lib/prism-content-service-client/config.rb",
     "lib/prism-content-service-client/event.rb",
     "lib/prism-content-service-client/event_persistence.rb",
