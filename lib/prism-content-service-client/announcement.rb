@@ -18,6 +18,8 @@ module ContentService
 
     def initialize(announcement_attr)
       announcement_attr ||= {}
+      announcement_attr =  HashWithIndifferentAccess.new(announcement_attr)
+
       self.attributes = announcement_attr.slice *@@attributes
     end
 

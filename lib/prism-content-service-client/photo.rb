@@ -18,6 +18,8 @@ module ContentService
 
     def initialize(photo_attr)
       photo_attr ||= {}
+      photo_attr =  HashWithIndifferentAccess.new(photo_attr)
+
       self.attributes = photo_attr.slice *@@attributes
     end
 
