@@ -6,7 +6,7 @@ module ContentService
 
     # not including the validations because this is a read-only interface
 
-    @@attributes = [:name, :description, :starting_at, :location_name, :document_definition_id, :id]
+    @@attributes = [:name, :description, :starting_at, :location_name, :document_definition_id, :id, :canceled_at, :canceled]
 
     attr_accessor *@@attributes
 
