@@ -26,7 +26,7 @@ module ContentService
         end
 
         def photos_from(response)
-          JSON.parse(response.body)['photos'].map(&:values).flatten.map{|attr| ContentService::Photo.new(attr) }
+          JSON.parse(response.body)['photos'].map{|attr| ContentService::Photo.new(attr) }
         end
 
         def error_from(response)

@@ -26,7 +26,7 @@ module ContentService
         end
 
         def announcements_from(response)
-          JSON.parse(response.body)['announcements'].map(&:values).flatten.map{|attr| ContentService::Announcement.new(attr) }
+          JSON.parse(response.body)['announcements'].map{|attr| ContentService::Announcement.new(attr) }
         end
 
         def error_from(response)
