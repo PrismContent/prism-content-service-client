@@ -6,7 +6,7 @@ module ContentService
 
     # not including the validations because this is a read-only interface
 
-    @@attributes = [:title, :body, :id]
+    @@attributes = [:title, :content, :id]
 
     attr_accessor *@@attributes
 
