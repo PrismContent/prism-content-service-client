@@ -6,7 +6,7 @@ module ContentService
 
     # not including the validations because this is a read-only interface
 
-    @@attributes = [:title, :content, :id, :photo_url]
+    @@attributes = [:title, :content, :id, :photo_url, :main_content_template_id, :recurrence]
 
     attr_accessor *@@attributes
 
