@@ -9,8 +9,12 @@ module ContentService
     attr_accessor *@@attributes
 
     class << self
-      def find(account_id)
-        ContentService::BirthdayPersistence.find_for_account_id account_id
+      def find(account_id, start_date = nil)
+        if start_date.blank?
+          ContentService::BirthdayPersistence.find_for_date_and_account_id start_date, account_id
+        else
+          ContentService::BirthdayPersistence.find_for_account_id account_id
+        end
       end
     end
 

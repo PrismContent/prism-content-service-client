@@ -8,6 +8,11 @@ module ContentService
         return_collection response
       end
 
+      def find_for_date_and_account_id(a_date, account_id)
+        response = Typhoeus::Request.get "#{collection_url(account_id)}?start_date=#{a_date}"
+        return_collection response
+      end
+
       def enqueue(request)
         ContentService::Config.hydra.queue(request)
       end
