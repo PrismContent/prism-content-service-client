@@ -11,9 +11,9 @@ module ContentService
     class << self
       def find(account_id, start_date = nil)
         if start_date.blank?
-          ContentService::AnniversaryPersistence.find_for_date_and_account_id start_date, account_id
-        else
           ContentService::AnniversaryPersistence.find_for_account_id account_id
+        else
+          ContentService::AnniversaryPersistence.find_for_date_and_account_id start_date, account_id
         end
       end
     end
