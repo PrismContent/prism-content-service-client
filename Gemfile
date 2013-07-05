@@ -3,7 +3,7 @@ source "http://rubygems.org"
 # Example:
 #   gem "activesupport", ">= 2.3.5"
 
-gem 'typhoeus', '~>0.3.3'
+gem 'typhoeus', '~>0.6.2'
 gem 'activesupport', '>2.3.5'
 gem 'json', '~>1.6'
 
